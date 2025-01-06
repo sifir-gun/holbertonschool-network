@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+echo "Active Internet connections (only servers)"
+sudo netstat -lntup
+
+echo
+echo "Active UNIX domain sockets (only servers)"
+sudo netstat -lxp
