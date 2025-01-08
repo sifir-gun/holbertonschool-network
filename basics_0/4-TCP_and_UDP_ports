@@ -9,7 +9,6 @@ echo "Active Internet connections (only servers)"
 # -p : Show PID/Program name
 netstat -lntup
 
-echo
 echo "Active UNIX domain sockets (only servers)"
 # -l : Show only listening sockets
 # -x : UNIX domain sockets
