@@ -1,6 +1,3 @@
 # Displays all active IPv4 IPs on the machine
 
-# Use ip or ifconfig command depending on availability
-if command -v ip > /dev/null 2>&1; then
-    # Using ip command
-    ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | tr '\n' '\n'
+ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | tr '\n' '\n'
