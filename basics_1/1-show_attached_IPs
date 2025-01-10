@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # Script that displays all active IPv4 IPs on the machine
 
-ip -o addr | awk '!/^[0-9]*: ?lo|link\/ether/ {gsub("/", " "); print $2" "$4}'
+sudo lsof -nP -iTCP -sTCP:LISTEN
