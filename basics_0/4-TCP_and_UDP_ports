@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
-# Script that displays listening ports (TCP, UDP, UNIX)
+# Script that displays listening ports
 
-sudo netstat -ltup
-
-echo
-echo "Active UNIX domain sockets (only servers)"
-sudo netstat -lxp
+sudo netstat -tulpn
