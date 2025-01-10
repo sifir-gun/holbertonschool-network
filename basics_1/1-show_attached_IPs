@@ -4,7 +4,3 @@
 if command -v ip > /dev/null 2>&1; then
     # Using ip command
     ip -4 addr show | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | tr '\n' '\n'
-else
-    # Fallback to ifconfig
-    ifconfig | grep -oP '(?<=inet\s)\d+(\.\d+){3}' | tr '\n' '\n'
-fi
