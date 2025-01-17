@@ -1,5 +1,3 @@
-![Header Image](https://github.com/sifir-gun/holbertonschool-network/blob/main/what_happens_when_your_type_google_com_in_your_browser_and_press_enter/google_networking.png)
-
 # What happens when you type https://www.google.com into your browser?
 
 **Guney Tasdelen 🧑🏻‍💻**  
@@ -17,7 +15,6 @@ As future engineers or developers, it is essential to master fundamental concept
 
 In this article, we will break down step by step what happens from the moment you press Enter to the moment the page displays in your browser.
 
-![Distributed Web Infrastructure - Architecture Diagram](https://github.com/sifir-gun/holbertonschool-network/blob/main/what_happens_when_your_type_google_com_in_your_browser_and_press_enter/Architecture_Diagram.png)
 
 ## 2. Step by Step
 
@@ -105,7 +102,6 @@ Finally, your browser receives the HTTP response, containing the HTML code, CSS 
 
 And there you have it! What seems like a simple press of the Enter key actually triggers a complex series of operations involving multiple machines across the globe.
 
-![Sequence diagram illustrating the steps of loading a web page](https://github.com/sifir-gun/holbertonschool-network/blob/main/what_happens_when_your_type_google_com_in_your_browser_and_press_enter/Sequence_Diagram.png)
 
 ## 5. Sources
 
