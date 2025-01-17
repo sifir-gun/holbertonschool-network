@@ -37,9 +37,11 @@ Once the IP address is obtained, your computer establishes a TCP (Transmission C
 
 During TCP negotiation, we talk about the 3-way handshake:
 
-1. SYN (client → server)
-2. SYN-ACK (server → client)
-3. ACK (client → server)
+1. SYN (client → server) The browser sends a synchronization packet to the server via TCP port 443.
+2. SYN-ACK (server → client) The server acknowledges with a synchronization-acknowledgment packet.
+3. ACK (client → server) The browser completes the handshake with an acknowledgment packet.
+
+
 
 ### 2.3 Firewall
 
@@ -49,14 +51,17 @@ Before reaching Google's servers, the request may pass through several firewalls
 - Your company/university may have a network firewall
 - Google also protects its infrastructure using firewalls and other filtering systems (such as intrusion detection systems)
 
-If a firewall deems your request suspicious (an unauthorized port, unusual traffic, etc.), the connection can be blocked.
+The firewall filters traffic and only allows secure connections through TCP port 443 (HTTPS) and port 80 (HTTP), blocking unauthorized access.
+
 
 ### 2.4 HTTPS/SSL
 
 When you see https://, it means communication is encrypted through TLS/SSL (Transport Layer Security / Secure Sockets Layer).
 
-SSL/TLS Handshake: Your browser and the server negotiate a method of encryption and exchange certificates to ensure the server is who it claims to be (authentication).
-Once the secure connection is established, all data is exchanged in encrypted form to prevent interception and content manipulation (Man-in-the-Middle attacks).
+1. SSL/TLS Handshake: Your browser and the server negotiate a method of encryption and exchange certificates to ensure the server is who it claims to be (authentication).
+2. Once the secure connection is established, all data is exchanged in encrypted form to prevent interception and content manipulation (Man-in-the-Middle attacks).
+
+This secure connection is established over TCP port 443, ensuring that all data exchanged is encrypted.
 
 ### 2.5 Load-Balancer
 
@@ -82,6 +87,8 @@ In many systems, the web server then communicates with an application server (e.
 - It receives request data (session, cookies, URL parameters, etc.)
 - It performs the required logic, for example validating a user ID, processing a form, or generating dynamic content
 
+The application server dynamically generates the web page and prepares the final content for the client.
+
 ### 2.8 Database
 
 If the application needs data, it connects to a database (SQL or NoSQL).
@@ -90,6 +97,9 @@ If the application needs data, it connects to a database (SQL or NoSQL).
 - The application server executes a query (SELECT, INSERT, etc.), retrieves the response, and then formats it to send back to the web server
 
 Once the response is fully constructed, it returns in the reverse path: database → application server → web server → load balancer → your browser.
+
+This architecture ensures high availability and performance, with replicas ready to take over in case of failure.
+
 
 ## 3. Conclusion: The Display in the Browser
 
